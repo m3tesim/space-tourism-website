@@ -261,26 +261,6 @@ select {
 }
 
 
-.background-home{
-  background-size: cover;
-  background-position: bottom center;
-  background-image: url(./assets/home/background-home-mobile.jpg);
-
-}
-
-
-@media (min-width: 35rem) {
-  .background-home {
-      background-position: center center;
-      background-image: url(./assets/home/background-home-tablet.jpg);
-  }
-}
-
-@media (min-width: 45rem) {
-  .background-home{
-      background-image: url(./assets/home/background-home-desktop.jpg);
-  }
-}
 /* --------------------------- */
 /* Components Clases */
 /* --------------------------- */
@@ -308,13 +288,22 @@ select {
 }
 
 .primary-navigation{
-  --underline-gap:2em;
-
+  background-color: hsl(var(--color-dark)/.8);
+  gap:2rem;
   list-style: none;
   padding: 0;
   margin: 0;
 
+
 }
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+    background-color: hsl(var(--color-light)/.1);
+    backdrop-filter: blur(1.5rem);
+  }
+}
+
+
 
 .primary-navigation a {
   text-decoration: none;
@@ -351,9 +340,59 @@ color: var(--color-light);
 
 }
 
+#menue-button{
+  display: none;
+}
+
+@media (max-width:35rem) {
+
+  #menue-button{
+    position: fixed;
+    display:block;
+     right: 1.5rem;
+     top: 3rem;
+     z-index: 10;
+     background: none;
+     border: none;
+     background-image: url(./assets/shared/icon-hamburger.svg);
+     background-repeat: no-repeat;
+     aspect-ratio: 1;
+     width: 2rem;
+
+  }
+  #menue-button[aria-expanded="true"]{
+    transition: background-image 500ms ease-in-out  ;
+
+    background-image: url(./assets/shared/icon-close.svg);
+
+  }
 
 
+  .primary-navigation{
+    position: fixed;
+    gap:.8rem;
+    flex-direction: column;
+    inset:0 0 0 30%;
+    list-style: none;
+    padding: min(20vh,15rem) 0 2rem 2rem;
+    margin: 0;
+    z-index: 2;
+    transform: translateX(2000px);
+    transition: transform 500ms ease-in-out  ;
 
+  
+  }
+ 
+  .primary-navigation[data-visibale="true"]{
+    transform: translateX(0);
+
+
+  }
+
+.underline-indicators > .active {
+  border-bottom: 0;
+}
+}
 
 
 
@@ -402,11 +441,12 @@ color: var(--color-light);
 
 
 .navbar{
-  background-color: hsl(var(--color-dark)/.5);
-
+  
   float: right;
   padding: 0 6rem;
 }
+
+
 
 
 .logo{
@@ -427,4 +467,30 @@ color: var(--color-light);
   border: 0;
 }
 
+
+
+/* ----------------------------- */
+/* Page specific background      */
+/* ----------------------------- */
+body {
+  background-size:cover;
+}
+/* home */
+.background-home {
+  background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+  .background-home {
+      background-position: center center;
+      background-image: url(./assets/home/background-home-tablet.jpg);
+  }
+}
+
+@media (min-width: 45rem) {
+
+  .background-home {
+      background-image: url(./assets/home/background-home-desktop.jpg);
+  }
+} 
 

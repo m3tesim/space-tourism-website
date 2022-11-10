@@ -17,6 +17,7 @@
     <!-- Our custom CSS -->
     <link rel="stylesheet" href="index.css" />
     <title>Frontend Mentor | Space tourism website</title>
+    <script src="./index.js"  defer></script>
   </head>
   <body class="background-home bg-dark text-light">
     <header class="primary-header flex">
@@ -27,11 +28,13 @@
           class="logo"
         />
       </div>
-  <!--     
-   <nav class="navbar">
+    <button   id="menue-button"   aria-expanded="false"  aria-controls="primary-navigation" > <span class="sr-only" >Menu</span></button>
+
+   <nav class="navbar" >
         <ul
           class="primary-navigation flex underline-indicators fs-400 ff-sans-cond"
           style="--gap: 3rem"
+          data-visibale="false"
         >
           <li class="active">
             <a class="uppercase text-light letter-spacing-2" href="#">
@@ -56,7 +59,7 @@
           </li>
         </ul>
       </nav>
- -->
+ 
 
     </header>
     <section class="grid-container">
