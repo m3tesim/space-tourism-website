@@ -1,38 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="index.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+    <script src="./index.js" defer></script>
+  </head>
 
-  01 Pick your destination
+  <body class="background-destination bg-dark text-light">
+    <header class="primary-header flex">
+      <div>
+        <img
+          src="./assets/shared/logo.svg"
+          alt="space tourism logo"
+          class="logo"
+        />
+      </div>
+      <button
+        id="menue-button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
 
-  Moon
-  Mars
-  Europa
-  Titan
+      <nav>
+        <ul
+          class="primary-navigation flex underline-indicators fs-400 ff-sans-cond"
+          style="--gap: 3rem"
+          data-visibale="false"
+        >
+          <li>
+            <a class="uppercase text-light letter-spacing-2" href="#">
+              <span class="text-light" aria-hidden="true">00 </span>Home</a
+            >
+          </li>
+          <li class="active">
+            <a class="uppercase text-light letter-spacing-2" href="#"
+              ><span name="Destination" class="text-light" aria-hidden="true"
+                >01 </span
+              >Destination</a
+            >
+          </li>
+          <li>
+            <a class="uppercase text-light letter-spacing-2" href="#"
+              ><span class="text-light" aria-hidden="true">02 </span>Crew</a
+            >
+          </li>
+          <li>
+            <a class="uppercase text-light letter-spacing-2" href="#"
+              ><span class="text-light" aria-hidden="true">03 </span
+              >Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  Europa
+    <main class="grid-container">
+      <div>
+        <h2 class="numbered-title destination-header">
+          <span aria-hidden="true">01</span> Pick your destination
+        </h2>
 
-  The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
-  winter lover’s dream. With an icy surface, it’s perfect for a bit of 
-  ice skating, curling, hockey, or simple relaxation in your snug 
-  wintery cabin.
-
-  Avg. distance
-  628 mil. km
-
-  Est. travel time
-  3 years
-</body>
+        <img
+          class="img-destanation"
+          src="assets\destination\image-moon.png"
+          alt="Moon image"
+        />
+      </div>
+      <div class="flex column">
+        <div class="underline-indicators flex" style="--gap: 3rem">
+          <button
+            aria-selected="true"
+            class="text-purple uppercase letter-spacing-2 tab"
+          >
+            Moon
+          </button>
+          <button
+            aria-selected="false"
+            class="text-purple uppercase letter-spacing-2 tab"
+          >
+            Mars
+          </button>
+          <button
+            aria-selected="false"
+            class="text-purple uppercase letter-spacing-2 tab"
+          >
+            Europa
+          </button>
+          <button
+            aria-selected="false"
+            class="text-purple uppercase letter-spacing-2 tab"
+          >
+            Titan
+          </button>
+        </div>
+        <article>
+          <div>
+          <h2 class="fs-800 ff-serif uppercase ">MOON</h2>
+          <p class="fs-400 text-purple">
+            See our planet as you’ve never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you’re there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites.
+          </p>
+        </div>
+          <div class=" destination-meta " >
+            <div>
+              <h3 class="text-purple letter-spacing-3 fs-300 ff-sans-normal">
+                AVG. DISTANCE
+              </h3>
+              <p class="fs-500 ff-serif uppercase">384,400 km</p>
+            </div>
+            <div>
+              <h3 class="text-purple letter-spacing-3 fs-300 ff-sans-normal">
+                Est. travel time
+              </h3>
+              <p class="fs-500 ff-serif uppercase">3 days</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
 </html>
