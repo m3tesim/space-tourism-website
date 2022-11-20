@@ -486,6 +486,10 @@ body {
   margin-bottom: .5rem;
 }
 
+.dot-indicators{
+  justify-content: center;
+}
+
 
 @media (min-width: 35rem) {
   .primary-navigation{
@@ -516,9 +520,7 @@ body {
     float: left;
   }
 
-  .dot-indicators{
-    justify-content: center;
-  }
+ 
 }
 
 @media (min-width: 45rem) {
@@ -548,6 +550,9 @@ body {
   .background-crew{
     background-image: url(./assets/crew/background-crew-desktop.jpg);
   
+  }
+  .dot-indicators{
+    justify-content: left;
   }
  
 } 
@@ -627,9 +632,7 @@ body {
   gap:0;
 }
 
-.dot-indicators{
-  justify-content: center;
-}
+
 .crew-container{
   padding-bottom:max(8rem, 10vh);
 }
@@ -653,9 +656,12 @@ justify-content: center;
 place-items: center;
 padding-bottom: -4rem;
 padding-left: 1rem;
-border-bottom: 1px solid hsl( var(--color-light) / .3);
 }
+.img-crew{
+  transform: scale(.8);
+  border-bottom: 1px solid hsl( var(--color-light) / .3);
 
+}
 .crew-container .flex{
   gap:2rem;
 }

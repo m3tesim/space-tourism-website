@@ -21,7 +21,9 @@
     <!-- Our custom CSS -->
     <link rel="stylesheet" href="index.css" />
     <title>Frontend Mentor | Space tourism website</title>
-    <script src="./index.js" defer></script>
+   
+    <script  type="text/javascript"  src="./data.js" defer></script>
+    <script  type="text/javascript"  src="./index.js" defer></script>
   </head>
 
   <body class="background-destination bg-dark text-light">
@@ -81,6 +83,7 @@
         </h2>
 
         <img
+          id="dest-img"
           class="img-destanation"
           src="assets\destination\image-moon.png"
           alt="Moon image"
@@ -89,24 +92,32 @@
       <div class="flex column">
         <div class="underline-indicators flex" style="--gap: 3rem">
           <button
-            aria-selected="true"
+          name="Moon"
+          onclick="setDestination(this.name)"
+            aria-selected="fales"
             class="text-purple uppercase letter-spacing-2 tab"
           >
             Moon
           </button>
           <button
+          name="Mars"
+          onclick="setDestination(this.name)"
             aria-selected="false"
             class="text-purple uppercase letter-spacing-2 tab"
           >
             Mars
           </button>
           <button
+          name="Europa"
+          onclick="setDestination(this.name)"
             aria-selected="false"
             class="text-purple uppercase letter-spacing-2 tab"
           >
             Europa
           </button>
           <button
+          name="Titan"
+          onclick="setDestination(this.name)"
             aria-selected="false"
             class="text-purple uppercase letter-spacing-2 tab"
           >
@@ -115,8 +126,8 @@
         </div>
         <article>
           <div>
-          <h2 class="fs-800 ff-serif uppercase ">MOON</h2>
-          <p class="fs-400 text-purple">
+          <h2 id="planet-title" class="fs-800 ff-serif uppercase ">MOON</h2>
+          <p id="planet-info" class="fs-400 text-purple">
             See our planet as you’ve never seen it before. A perfect relaxing
             trip away to help regain perspective and come back refreshed. While
             you’re there, take in some history by visiting the Luna 2 and Apollo
@@ -128,13 +139,13 @@
               <h3 class="text-purple letter-spacing-3 fs-300 ff-sans-normal">
                 AVG. DISTANCE
               </h3>
-              <p class="fs-500 ff-serif uppercase">384,400 km</p>
+              <p  id="planet-distance" class="fs-500 ff-serif uppercase">384,400 km</p>
             </div>
             <div>
               <h3 class="text-purple letter-spacing-3 fs-300 ff-sans-normal">
                 Est. travel time
               </h3>
-              <p class="fs-500 ff-serif uppercase">3 days</p>
+              <p  id="planet-travel" class="fs-500 ff-serif uppercase">3 days</p>
             </div>
           </div>
         </article>

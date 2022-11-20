@@ -1,4 +1,4 @@
-{
+var data= {
   "destinations": [
     {
       "name": "Moon",
