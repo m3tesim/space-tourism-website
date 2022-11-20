@@ -10,10 +10,13 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+   <!-- Google fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap"
+     rel="stylesheet"
+   />
     <!-- Our custom CSS -->
     <link rel="stylesheet" href="index.css" />
     <title>Frontend Mentor | Space tourism website</title>
@@ -32,28 +35,28 @@
 
    <nav  >
         <ul
-          class="primary-navigation flex underline-indicators fs-400 ff-sans-cond"
+          class="primary-navigation flex  underline-indicators fs-400 ff-sans-cond"
           style="--gap: 3rem"
           data-visibale="false"
         >
-          <li class="active">
-            <a class="uppercase text-light letter-spacing-2" href="#">
+          <li class="active" onclick="setPage(this)">
+            <a class="  uppercase text-light letter-spacing-2" href="./index.html">
               <span class="text-light" aria-hidden="true" >00 </span>Home</a
             >
           </li>
-          <li>
-            <a class="uppercase text-light letter-spacing-2" href="#"
+          <li onclick="setPage(this)">
+            <a class="uppercase text-light letter-spacing-2" href="destination.html"
               ><span name="Destination" class="text-light" aria-hidden="true">01 </span
               >Destination</a
             >
           </li>
-          <li>
-            <a class="uppercase text-light letter-spacing-2" href="#"
+          <li onclick="setPage(this)">
+            <a class="uppercase text-light letter-spacing-2" href="crew.html"
               ><span class="text-light" aria-hidden="true">02 </span>Crew</a
             >
           </li>
-          <li>
-            <a class="uppercase text-light letter-spacing-2" href="#"
+          <li onclick="setPage(this)">
+            <a class="uppercase text-light letter-spacing-2" href="technology.html"
               ><span class="text-light" aria-hidden="true">03 </span>Technology</a
             >
           </li>

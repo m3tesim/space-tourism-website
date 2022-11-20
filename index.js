@@ -15,6 +15,14 @@ menueIcon.addEventListener("click", () => {
   }
 });
 
+function setPage(element){
+ // console.log("nav clicked",element);
+const tabs= document.querySelectorAll(" nav li")
+tabs.forEach(tab=>(tab.classList.remove("active")))
+//console.log("classes",tabs);
+element.classList.add("active")
+
+}
 // Destination page
 function setDestination(name) {
   const planet = data["destinations"].filter((i) => i.name === name)[0];

@@ -1,32 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="index.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+    <script type="text/javascript" src="./data.js" defer></script>
 
-  03 Space launch 101
+    <script type="text/javascript" src="./index.js" defer></script>
+  </head>
 
-  1
-  2
-  3
+  <body class="background-tech bg-dark text-light">
+    <header class="primary-header flex">
+      <div>
+        <img
+          src="./assets/shared/logo.svg"
+          alt="space tourism logo"
+          class="logo"
+        />
+      </div>
+      <button
+        id="menue-button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
 
-  The terminology...
-  Space capsule
-
-  A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
-  capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
-  you'll spend your time during the flight. It includes a space gym, cinema, 
-  and plenty of other activities to keep you entertained.
-</body>
+      <nav>
+        <ul
+          class="primary-navigation flex underline-indicators fs-400 ff-sans-cond"
+          style="--gap: 3rem"
+          data-visibale="false"
+        >
+          <li onclick="setPage(this)">
+            <a
+              class="uppercase text-light letter-spacing-2"
+              href="./index.html"
+            >
+              <span class="text-light" aria-hidden="true">00 </span>Home</a
+            >
+          </li>
+          <li onclick="setPage(this)">
+            <a
+              class="uppercase text-light letter-spacing-2"
+              href="./destination.html"
+              ><span name="Destination" class="text-light" aria-hidden="true"
+                >01 </span
+              >Destination</a
+            >
+          </li>
+          <li  onclick="setPage(this)">
+            <a class="uppercase text-light letter-spacing-2" href="./crew.html"
+              ><span class="text-light" aria-hidden="true">02 </span>Crew</a
+            >
+          </li>
+          <li  class="active" onclick="setPage(this)">
+            <a
+              class="uppercase text-light letter-spacing-2"
+              href="./technology.html"
+              ><span class="text-light" aria-hidden="true">03 </span
+              >Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+   
+    <main class="grid-container tech-container">
+     
+      <div class="flex column">
+        <h1 class="numbered-title tech-header">
+          <span aria-hidden="true">01</span> SPACE LAUNCH 101
+        </h1>
+        <section class="flex tech-content">
+          <div
+            class="number-indicators flex fs-500 ff-serif"
+            style="margin-top: 5rem"
+          >
+            <button aria-selected="true">1</button>
+            <button aria-selected="false">2</button>
+            <button aria-selected="false">3</button>
+          </div>
+          <article>
+            <div >
+              <h2 class="fs-400 uppercase text-purple">THE TERMINOLOGY…</h2>
+              <h2 id="tech-name" class="fs-700 ff-serif uppercase">
+                LAUNCH VEHICLE
+              </h2>
+              <br />
+              <p id="tech-description" class="fs-400 text-purple">
+                A launch vehicle or carrier rocket is a rocket-propelled vehicle
+                used to carry a payload from Earth's surface to space, usually
+                to Earth orbit or beyond. Our WEB-X carrier rocket is the most
+                powerful in operation. Standing 150 metres tall, it's quite an
+                awe-inspiring sight on the launch pad!
+              </p>
+            </div>
+          </article>
+        </section>
+      </div>
+      <div class="img-tech">
+        <img
+          id="crew-tech"
+          src="assets\technology\image-space-capsule-portrait.jpg"
+          alt="space-capsule-landscape"
+        />
+      </div>
+    </main>
+  </body>
 </html>

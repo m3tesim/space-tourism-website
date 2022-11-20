@@ -326,7 +326,9 @@ select {
 }
 
 
-
+.primary-navigation li {
+  min-width: fit-content;
+}
 .primary-navigation a {
   text-decoration: none;
 }
@@ -449,15 +451,18 @@ body {
 .background-home {
   background-image: url(./assets/home/background-home-mobile.jpg);
 }
+.background-destination{
+  background-image: url(./assets/destination/background-destination-mobile.jpg);
 
+}
+.background-tech{
+  background-image: url(./assets/technology/background-technology-mobile.jpg);
+
+}
 
 /* destination page  */
 
-.background-destination{
-  background-image: url(./assets/destination/background-destination-mobile.jpg);
-  background-repeat: no-repeat;
 
-}
 
 
 .img-destanation{
@@ -489,6 +494,7 @@ body {
 .dot-indicators{
   justify-content: center;
 }
+/* tech Page */
 
 
 @media (min-width: 35rem) {
@@ -508,6 +514,10 @@ body {
   }
   .background-crew{
     background-image: url(./assets/crew/background-crew-tablet.jpg);
+  
+  }
+  .background-tech{
+    background-image: url(./assets/technology/background-technology-tablet.jpg);
   
   }
 
@@ -551,10 +561,29 @@ body {
     background-image: url(./assets/crew/background-crew-desktop.jpg);
   
   }
+  .background-tech{
+    background-image: url(./assets/technology/background-technology-desktop.jpg);
+  
+  }
   .dot-indicators{
     justify-content: left;
   }
- 
+
+  .tech-container .number-indicators{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .img-tech{
+    position: sticky;
+    right: 0;
+  }
+.tech-content{
+  place-items: center;
+  justify-content: center;
+  gap:5rem
+}
 } 
 
 @media (min-width: 35em) and (max-width: 45em) {
@@ -675,3 +704,5 @@ padding-left: 1rem;
 }
 
 }
+
+ 
