@@ -83,42 +83,46 @@
       </nav>
     </header>
    
-    <main class="grid-container tech-container">
+    <main class=" tech-container  ">
      
-      <div class="flex column">
+      <div class="flex column "  >
         <h1 class="numbered-title tech-header">
           <span aria-hidden="true">01</span> SPACE LAUNCH 101
         </h1>
-        <section class="flex tech-content">
+        <section class=" tech-content flex ">
           <div
             class="number-indicators flex fs-500 ff-serif"
             style="margin-top: 5rem"
           >
-            <button aria-selected="true">1</button>
-            <button aria-selected="false">2</button>
-            <button aria-selected="false">3</button>
+          
+            <button id="Launch vehicle" name="Launch vehicle" aria-selected="true" onclick="setTech(this.name)">1</button>
+            <button id="Spaceport"  name="Spaceport" aria-selected="false" onclick="setTech(this.name)">2</button>
+            <button id="Space capsule"  name="Space capsule" aria-selected="false" onclick="setTech(this.name)">3</button>
           </div>
-          <article>
-            <div >
-              <h2 class="fs-400 uppercase text-purple">THE TERMINOLOGY…</h2>
-              <h2 id="tech-name" class="fs-700 ff-serif uppercase">
-                LAUNCH VEHICLE
-              </h2>
-              <br />
-              <p id="tech-description" class="fs-400 text-purple">
-                A launch vehicle or carrier rocket is a rocket-propelled vehicle
-                used to carry a payload from Earth's surface to space, usually
-                to Earth orbit or beyond. Our WEB-X carrier rocket is the most
-                powerful in operation. Standing 150 metres tall, it's quite an
-                awe-inspiring sight on the launch pad!
-              </p>
-            </div>
-          </article>
+          
+            <article >
+              
+                <h2 class="fs-400 uppercase text-purple" style="margin-bottom: .5rem;">THE TERMINOLOGY…</h2>
+                <h2 id="tech-name" class="fs-700 ff-serif uppercase">
+                  LAUNCH VEHICLE
+                </h2>
+                <br />
+                <p id="tech-description" class="fs-400 text-purple">
+                  A launch vehicle or carrier rocket is a rocket-propelled vehicle
+                  used to carry a payload from Earth's surface to space, usually
+                  to Earth orbit or beyond. Our WEB-X carrier rocket is the most
+                  powerful in operation. Standing 150 metres tall, it's quite an
+                  awe-inspiring sight on the launch pad!
+                </p>
+              
+            </article>
+          
+        
         </section>
       </div>
-      <div class="img-tech">
+      <div class="img-tech" >
         <img
-          id="crew-tech"
+          id="tech-img"
           src="assets\technology\image-space-capsule-portrait.jpg"
           alt="space-capsule-landscape"
         />
