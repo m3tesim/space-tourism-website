@@ -382,6 +382,7 @@ select {
 }
 
 .number-indicators > * {
+  cursor: pointer;
   height: 5rem;
   width: 5rem;
   background: none;
